@@ -4,14 +4,17 @@ import Typography from '@mui/material/Typography'
 import { Container } from '@mui/system'
 import Head from 'next/head'
 import React from 'react'
+import useStyles from '../Utils/styles'
+
 
 export default function Layout({children}) {
+  const classes = useStyles();
   return (
     <div>
       <Head>
         <title>Next Amazona</title>
       </Head>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.navbar}>
         <Toolbar>
           <Typography>Amazona</Typography>
         </Toolbar>
